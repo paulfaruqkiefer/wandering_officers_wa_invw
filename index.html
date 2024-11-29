@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previously Fired Officers by Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dropdown Menu for Jurisdiction Selection -->
+    <div class="dropdown-container">
+        <label for="jurisdiction-select">Select Jurisdiction:</label>
+        <select id="jurisdiction-select">
+            <option value="All Jurisdictions">All Jurisdictions</option>
+            <option value="Adams County">Adams County</option>
+            <option value="Asotin County">Asotin County</option>
+            <option value="Benton County">Benton County</option>
+            <option value="Chelan County">Chelan County</option>
+            <option value="Clallam County">Clallam County</option>
+            <option value="Clark County">Clark County</option>
+            <option value="Columbia County">Columbia County</option>
+            <option value="Cowlitz County">Cowlitz County</option>
+            <option value="Douglas County">Douglas County</option>
+            <option value="Ferry County">Ferry County</option>
+            <option value="Franklin County">Franklin County</option>
+            <option value="Garfield County">Garfield County</option>
+            <option value="Grant County">Grant County</option>
+            <option value="Grays Harbor County">Grays Harbor County</option>
+            <option value="Island County">Island County</option>
+            <option value="Jefferson County">Jefferson County</option>
+            <option value="King County">King County</option>
+            <option value="Kitsap County">Kitsap County</option>
+            <option value="Kittitas County">Kittitas County</option>
+            <option value="Klickitat County">Klickitat County</option>
+            <option value="Lewis County">Lewis County</option>
+            <option value="Lincoln County">Lincoln County</option>
+            <option value="Mason County">Mason County</option>
+            <option value="Okanogan County">Okanogan County</option>
+            <option value="Pacific County">Pacific County</option>
+            <option value="Pend Oreille County">Pend Orielle County</option>
+            <option value="Pierce County">Pierce County</option>
+            <option value="San Juan County">San Juan County</option>
+            <option value="Skagit County">Skagit County</option>
+            <option value="Skamania County">Skamania County</option>
+            <option value="Snohomish County">Snohomish County</option>
+            <option value="Spokane County">Spokane County</option>
+            <option value="Stevens County">Stevens County</option>
+            <option value="Thurston County">Thurston County</option>
+            <option value="Wahkiakum County">Wahkiakum County</option>
+            <option value="Walla Walla County">Walla Walla County</option>
+            <option value="Whatcom County">Whatcom County</option>
+            <option value="Whitman County">Whitman County</option>
+            <option value="Yakima County">Yakima County</option>
+            <option value="State">State</option>
+            <option value="Federal">Federal</option>
+            <option value="Tribal">Tribal</option>
+            <option value="Railroad">Railroad</option>
+            <option value="Private Security">Private Security Company</option>
+        </select>
+    </div>
+    <div class="visualization-container">
+
+        <!-- Left Group (No Post-Termination Hires) -->
+        <div class="container" id="left-group">
+            <h3>No Post-Termination Hires</h3>
+            <svg id="chart-left"></svg>
+        </div>
+
+        <!-- Middle Group (Post-Single-Termination Hires) -->
+        <div class="container" id="middle-group">
+            <h3>Post-Single-Termination Hires</h3>
+            <svg id="chart-middle"></svg>
+        </div>
+
+        <!-- Right Group (Post-Multiple-Termination Hires) -->
+        <div class="container" id="right-group">
+            <h3>Post-Multiple-Termination Hires</h3>
+            <svg id="chart-right"></svg>
+        </div>
+
+    </div>
+    
+    <!-- Tooltip for mouseover -->
+    <div id="tooltip" style="display:none; position:absolute; background-color: #fff; border:1px solid #ccc; padding:10px; font-size:12px;"></div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
