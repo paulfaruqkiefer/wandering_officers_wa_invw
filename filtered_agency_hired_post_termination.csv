@@ -4,14 +4,14 @@
 3,Mason County District Court & Probation Services,1,1,1,100,N,Mason County,NA,NA
 4,Hamilton Police Department,2,1,0,50,N,Skagit County,NA,NA
 5,Clallam County Juvenile and Family Services,3,1,0,33.33333333,N,Clallam County,NA,NA
-6,Colville Tribal Corrections,3,1,0,33.33333333,Y,Tribal,Okanogan County,Ferry County
+6,Colville Tribal Corrections,3,1,0,33.33333333,Y,Tribal,NA,NA
 7,Sumas Police Department,9,2,0,22.22222222,N,Whatcom County,NA,NA
 8,La Center Police Department,15,3,0,20,N,Clark County,NA,NA
 9,Tonasket Police Department,10,2,1,20,N,Okanogan County,NA,NA
 10,Seattle Pacific University Office of Safety and Security,5,1,0,20,N,King County,NA,NA
 11,Woodway Police Department,5,1,0,20,N,Snohomish County,NA,NA
 12,Mabton Police Department,26,5,1,19.23076923,N,Yakima County,NA,NA
-13,Nooksack Indian Tribe Police Department,26,5,1,19.23076923,Y,Tribal,Whatcom County,NA
+13,Nooksack Indian Tribe Police Department,26,5,1,19.23076923,Y,Tribal,NA,NA
 14,King County Court Protection Unit,22,4,0,18.18181818,N,King County,NA,NA
 15,Toledo Police Department,11,2,1,18.18181818,N,Lewis County,NA,NA
 16,Brier Police Department,39,7,4,17.94871795,N,Snohomish County,NA,NA
@@ -19,7 +19,7 @@
 18,Kalama Police Department,18,3,0,16.66666667,N,Cowlitz County,NA,NA
 19,Enumclaw Police Department,39,6,1,15.38461538,N,King County,NA,NA
 20,Westport Police Department,14,2,0,14.28571429,N,Grays Harbor County,NA,NA
-21,Sauk-Suiattle Police Department,22,3,1,13.63636364,Y,Tribal,Skagit County,Snohomish County
+21,Sauk-Suiattle Police Department,22,3,1,13.63636364,Y,Tribal,NA,NA
 22,Mattawa Police Department,15,2,2,13.33333333,N,Grant County,NA,NA
 23,Napavine Police Department,15,2,1,13.33333333,N,Lewis County,NA,NA
 24,Buckley Police Department,23,3,0,13.04347826,N,Pierce County,NA,NA
@@ -29,11 +29,11 @@
 28,Milton Police Department,33,4,0,12.12121212,N,King County,Pierce County,NA
 29,Ferry County Sheriff's Office,17,2,0,11.76470588,N,Ferry County,NA,NA
 30,Grand Coulee Police Department,17,2,0,11.76470588,N,Grant County,NA,NA
-31,Spokane Tribal Police Department,17,2,0,11.76470588,Y,Tribal,Stevens County,Lincoln County
+31,Spokane Tribal Police Department,17,2,0,11.76470588,Y,Tribal,NA,NA
 32,Forks Police Department,26,3,2,11.53846154,N,Clallam County,NA,NA
 33,Ruston Police Department,26,3,0,11.53846154,N,Pierce County,NA,NA
 34,Orting Police Department,27,3,0,11.11111111,N,Pierce County,NA,NA
-35,Neah Bay Tribal Public Safety,9,1,0,11.11111111,Y,Tribal,Clallam County,NA
+35,Neah Bay Tribal Public Safety,9,1,0,11.11111111,Y,Tribal,NA,NA
 36,Blaine Police Department,28,3,0,10.71428571,N,Whatcom County,NA,NA
 37,Brewster Police Department,19,2,3,10.52631579,N,Okanogan County,NA,NA
 38,Everson Police Department,19,2,0,10.52631579,N,Whatcom County,NA,NA
@@ -41,7 +41,7 @@
 40,Allied Universal Executive Protection and Intelligence Services,20,2,0,10,N,Private Security,NA,NA
 41,Kittitas Police Department,10,1,0,10,N,Kittitas County,NA,NA
 42,Ritzville Police Department,10,1,0,10,N,Adams County,NA,NA
-43,Swinomish Police Department,34,3,0,8.82352941,Y,Tribal,Skagit County,NA
+43,Swinomish Police Department,34,3,0,8.82352941,Y,Tribal,NA,NA
 44,Woodland Police Department,22,2,0,9.090909091,N,Clark County,Cowlitz County,NA
 45,Winlock Police Department,11,1,1,9.090909091,N,Lewis County,NA,NA
 46,Connell Police Department,23,2,2,8.695652174,N,Franklin County,NA,NA
@@ -49,17 +49,17 @@
 48,Zillah Police Department,23,2,0,8.695652174,N,Yakima County,NA,NA
 49,Skamania County Sheriff's Office,35,3,0,8.571428571,N,Skamania County,NA,NA
 50,Kitsap County Sheriff's Corrections Division,12,1,0,8.333333333,N,Kitsap County,NA,NA
-51,Colville Tribal Police Department,74,6,2,8.108108108,Y,Tribal,Okanogan County,Ferry County
+51,Colville Tribal Police Department,74,6,2,8.108108108,Y,Tribal,NA,NA
 52,Seattle's Finest Security & Traffic Control,37,3,0,8.108108108,N,Private Security,NA,NA
 53,South Correctional Entity (Score),37,3,0,8.108108108,N,King County,NA,NA
 54,Bothell Police Department,112,9,3,8.035714286,N,King County,Snohomish County,NA
 55,Algona Police Department,38,3,0,7.894736842,N,King County,NA,NA
 56,Wapato Police Department,38,3,1,7.894736842,N,Yakima County,NA,NA
-57,Colville Tribal Natural Resource Enforcement,13,1,0,7.692307692,Y,Tribal,Okanogan County,Ferry County
+57,Colville Tribal Natural Resource Enforcement,13,1,0,7.692307692,Y,Tribal,NA,NA
 58,Royal City Police Department,13,1,0,7.692307692,N,Grant County,NA,NA
 59,King County Department of Adult Detention,27,2,0,7.407407407,N,King County,NA,NA
 60,Oroville Police Department,14,1,0,7.142857143,N,Okanogan County,NA,NA
-61,Shoalwater Bay Police Department,14,1,0,7.142857143,Y,Tribal,Pacific County,NA
+61,Shoalwater Bay Police Department,14,1,0,7.142857143,Y,Tribal,NA,NA
 62,Granger Police Department,29,2,0,6.896551724,N,Yakima County,NA,NA
 63,Snoqualmie Police Department,44,3,0,6.818181818,N,King County,NA,NA
 64,Fife Police Department,61,4,0,6.557377049,N,Pierce County,NA,NA
@@ -67,7 +67,7 @@
 66,Cosmopolis Police Department,16,1,0,6.25,N,Grays Harbor County,NA,NA
 67,Kettle Falls Police Department,16,1,0,6.25,N,Stevens County,NA,NA
 68,Dupont Police Department,33,2,0,6.060606061,N,Pierce County,NA,NA
-69,Suquamish Police Department,39,2,0,5.12820513,Y,Tribal,Kitsap County,NA
+69,Suquamish Police Department,39,2,0,5.12820513,Y,Tribal,NA,NA
 70,Western Washington University Police Department,34,2,0,5.882352941,N,Whatcom County,NA,NA
 71,Fircrest Police Department,17,1,0,5.882352941,N,Pierce County,NA,NA
 72,Goldendale Police Department,17,1,0,5.882352941,N,Klickitat County,NA,NA
@@ -76,21 +76,21 @@
 75,Edmonds Police Department,87,5,1,5.747126437,N,Snohomish County,NA,NA
 76,Long Beach Police Department,18,1,1,5.555555556,N,Pacific County,NA,NA
 77,Othello Police Department,37,2,0,5.405405405,N,Adams County,NA,NA
-78,Tulalip Tribal Police Services,76,4,1,5.263157895,Y,Tribal,Snohomish County,NA
-79,Puyallup Tribal Police Department,38,2,0,5.263157895,Y,Tribal,Pierce County,King County
+78,Tulalip Tribal Police Services,76,4,1,5.263157895,Y,Tribal,NA,NA
+79,Puyallup Tribal Police Department,38,2,0,5.263157895,Y,Tribal,NA,NA
 80,Normandy Park Police Department,19,1,0,5.263157895,N,King County,NA,NA
 81,Ridgefield Police Department,19,1,0,5.263157895,N,Clark County,NA,NA
 82,Anacortes Police Department,40,2,0,5,N,Skagit County,NA,NA
-83,Quinault Nation Police Department,20,1,0,5,Y,Tribal,Grays Harbor County,Jefferson County
-84,Upper Skagit Tribal Police Department,20,1,0,5,Y,Tribal,Skagit County,NA
+83,Quinault Nation Police Department,20,1,0,5,Y,Tribal,NA,NA
+84,Upper Skagit Tribal Police Department,20,1,0,5,Y,Tribal,NA,NA
 85,East Wenatchee Police Department,42,2,0,4.761904762,N,Douglas County,NA,NA
 86,Colfax Police Department,21,1,0,4.761904762,N,Whitman County,NA,NA
 87,Mount Vernon Police Department,65,3,0,4.615384615,N,Skagit County,NA,NA
 88,Steilacoom Department of Public Safety,22,1,0,4.545454545,N,Pierce County,NA,NA
-89,Kalispel Tribal Public Safety Department,45,2,1,4.444444444,Y,Tribal,Pend Orielle County,NA
+89,Kalispel Tribal Public Safety Department,45,2,1,4.444444444,Y,Tribal,NA,NA
 90,Tukwila Police Department,136,6,1,4.411764706,N,King County,NA,NA
 91,Garfield County Sheriff's Office,23,1,0,4.347826087,N,Garfield County,NA,NA
-92,Skokomish Tribal Police Department,23,1,1,4.347826087,Y,Tribal,Mason County,NA
+92,Skokomish Tribal Police Department,23,1,1,4.347826087,Y,Tribal,NA,NA
 93,Bainbridge Island Police Department,47,2,1,4.255319149,N,Kitsap County,NA,NA
 94,Des Moines Police Department,74,3,1,4.054054054,N,King County,NA,NA
 95,Franklin County Corrections Division,25,1,0,4,N,Franklin County,NA,NA
@@ -105,8 +105,8 @@
 104,Burlington Police Department,59,2,0,3.389830508,N,Skagit County,NA,NA
 105,Toppenish Police Department,59,2,0,3.389830508,N,Yakima County,NA,NA
 106,Clark County Sheriff's Office,238,8,0,3.361344538,N,Clark County,NA,NA
-107,Chehalis Tribal Law Enforcement,30,1,0,3.333333333,Y,Tribal,Grays Harbor County,Thurston County
-108,Stillaguamish Police Department,30,1,0,3.333333333,Y,Tribal,Snohomish County,NA
+107,Chehalis Tribal Law Enforcement,30,1,0,3.333333333,Y,Tribal,NA,NA
+108,Stillaguamish Police Department,30,1,0,3.333333333,Y,Tribal,NA,NA
 109,Longview Police Department,92,3,0,3.260869565,N,Cowlitz County,NA,NA
 110,Central Washington University Police Department,31,1,0,3.225806452,N,Kittitas County,NA,NA
 111,"Washington State University Police Department, Pullman",31,1,0,3.225806452,N,Whitman County,NA,NA
@@ -118,11 +118,11 @@
 117,Tenino Police Department,33,1,0,3.03030303,N,Thurston County,NA,NA
 118,Bremerton Police Department,102,3,2,2.941176471,N,Kitsap County,NA,NA
 119,Klickitat County Sheriff's Office,34,1,0,2.941176471,N,Klickitat County,NA,NA
-120,Port Gamble S'klallam Police Department,34,1,1,2.941176471,Y,Tribal,Kitsap County,NA
+120,Port Gamble S'klallam Police Department,34,1,1,2.941176471,Y,Tribal,NA,NA
 121,Duvall Police Department,35,1,0,2.857142857,N,King County,NA,NA
 122,Gig Harbor Police Department,35,1,1,2.857142857,N,Pierce County,NA,NA
 123,Yelm Police Department,35,1,0,2.857142857,N,Thurston County,NA,NA
-124,Lummi Nation Police Department,36,1,0,2.777777778,Y,Tribal,Whatcom County,NA
+124,Lummi Nation Police Department,36,1,0,2.777777778,Y,Tribal,NA,NA
 125,Port Townsend Police Department,36,1,0,2.777777778,N,Jefferson County,NA,NA
 126,San Juan County Sheriff's Office,36,1,0,2.777777778,N,San Juan County,NA,NA
 127,Sedro-Woolley Police Department,36,1,0,2.777777778,N,Skagit County,NA,NA
@@ -213,10 +213,10 @@
 212,Selah Police Department,28,0,0,0,N,Yakima County,NA,NA
 213,Washington State Gambling Commission,27,0,0,0,N,State,NA,NA
 214,Benton County Bureau of Corrections,26,0,0,0,N,Benton County,NA,NA
-215,Lower Elwha Klallam Police Department,25,0,0,0,Y,Tribal,Clallam County,NA
+215,Lower Elwha Klallam Police Department,25,0,0,0,Y,Tribal,NA,NA
 216,Medina Police Department,25,0,0,0,N,King County,NA,NA
 217,Snohomish Police Department,25,0,0,0,N,Snohomish Police,NA,NA
-218,Squaxin Island Public Safety,25,0,0,0,Y,Tribal,Mason County,NA
+218,Squaxin Island Public Safety,25,0,0,0,Y,Tribal,NA,NA
 219,Ocean Shores Police Department,24,0,0,0,N,Grays Harbor County,NA,NA
 220,Spokane Airport Police Department,21,0,0,0,N,Spokane County,NA,NA
 221,Cle Elum Police Department,19,0,0,0,N,Kittitas County,NA,NA
@@ -268,7 +268,7 @@
 268,"Washington State University Police Department, Vancouver",4,0,0,0,N,State,NA,NA
 269,Wilbur Police Department,4,0,0,0,N,Lincoln County,NA,NA
 270,Duvall-Carnation Police Department,3,0,0,0,N,King County,NA,NA
-271,Muckleshoot Indian Tribe Wildlife & Fisheries Department,3,0,0,0,Y,Tribal,King County,Pierce County
+271,Muckleshoot Indian Tribe Wildlife & Fisheries Department,3,0,0,0,Y,Tribal,NA,NA
 272,North East King County Regional Communications,3,0,0,0,N,King County,NA,NA
 273,Pierce County Juvenile Court,3,0,0,0,N,Pierce County,NA,NA
 274,Snohomish County Sheriff's Office Animal Services,3,0,0,0,N,Snohomish County,NA,NA
@@ -280,7 +280,7 @@
 280,Mossyrock Police Department,2,0,0,0,N,Lewis County,NA,NA
 281,Okanogan County Juvenile and Family Services,2,0,0,0,N,Okanogan County,NA,NA
 282,Rainier Police Department,2,0,0,0,N,Thurston County,NA,NA
-283,Snoqualmie Tribal Police Department,2,0,0,0,Y,Tribal,King County,NA
+283,Snoqualmie Tribal Police Department,2,0,0,0,Y,Tribal,NA,NA
 284,Southwest Snohomish County Communications,2,0,0,0,N,Snohomish County,NA,NA
 285,Tekoa Police Department,2,0,0,0,N,Whitman County,NA,NA
 286,Washington State Department of Health,2,0,0,0,N,State,NA,NA
@@ -296,7 +296,7 @@
 296,Garfield Police Department,1,0,0,0,N,Whitman County,NA,NA
 297,"Independent Force Investigations Team, King County",1,0,0,0,N,King County,NA,NA
 298,Island County Juvenile and Family Court Services,1,0,0,0,N,Island County,NA,NA
-299,Jamestown S'klallam Police Department,1,0,0,0,Y,Tribal,Clallam County,NA
+299,Jamestown S'klallam Police Department,1,0,0,0,Y,Tribal,NA,NA
 300,Jefferson County Jail,1,0,0,0,N,Jefferson County,NA,NA
 301,Kennewick Fire & Ambulance Department,1,0,0,0,N,Benton County,NA,NA
 302,King County Juvenile Court,1,0,0,0,N,King County,NA,NA
@@ -320,7 +320,7 @@
 321,Spokane County District Court & Probation Services,1,0,0,0,N,Spokane County,NA,NA
 322,Spokane County Prosecuting Attorney's Office,1,0,0,0,N,Spokane County,NA,NA
 323,Springdale Police Department,1,0,0,0,N,Stevens County,NA,NA
-324,Stillaguamish Tribal Courts and Justice Services,1,0,0,0,Y,Tribal,Snohomish County,NA
+324,Stillaguamish Tribal Courts and Justice Services,1,0,0,0,Y,Tribal,NA,NA
 326,Toppenish City Jail,1,0,0,0,N,Yakima County,NA,NA
 327,U.S. Department of Homeland Security,1,0,0,0,N,Federal,NA,NA
 328,U.S. Department of Veterans Affairs Police Department,1,0,0,0,N,Federal,NA,NA
