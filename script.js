@@ -125,51 +125,41 @@ document.addEventListener("DOMContentLoaded", function () {
                     d3.select("#tooltip").style("display", "none");
                 });
         
-            if (jurisdiction === "All Jurisdictions") {
-                const tribalCount = groupData.filter(d => d.is_tribal_lea === "Y").length;
-                const percentage = (tribalCount / groupData.length * 100).toFixed(0);
+                if (jurisdiction === "All Jurisdictions") {
+                    const tribalCount = groupData.filter(d => d.is_tribal_lea === "Y").length;
+                    const percentage = (tribalCount / groupData.length * 100).toFixed(0);
                 
-                // Split the text into parts
-                const textPart1 = "Tribal Police Departments as Percentage of Group: ";
-                const textPart2 = `${percentage}%`;
-            
-                // Use a function to wrap textPart1, while textPart2 is separate
-                const wrappedText = wrapText(textPart1, 20);
-            
-                wrappedText.forEach((line, index) => {
-                    // Append the non-bold portion
-                    svg.append("text")
-                        .attr("x", centerX)
-                        .attr("y", centerY + (index * 15) - 20)
-                        .attr("text-anchor", "middle")
-                        .attr("dominant-baseline", "middle")
-                        .attr("font-size", "14px")
-                        .attr("fill", "black")
-                        .text(line);
-            
-                    // If this is the last line, append the bold percentage at the end
-                    if (index === wrappedText.length - 1) {
-                        const textWidth = svg
-                            .append("text")
-                            .attr("x", -9999) // Place offscreen to measure text width
-                            .attr("y", -9999)
-                            .attr("font-size", "14px")
-                            .text(line)
-                            .node()
-                            .getBBox().width;
-            
+                    // Define the non-bold and bold parts
+                    const textPart1 = "Tribal Police Departments as Percentage of Group: ";
+                    const textPart2 = `${percentage}%`;
+                
+                    // Combine the non-bold text (textPart1) and wrap it
+                    const wrappedText = wrapText(textPart1, 20); // Wrap only textPart1
+                
+                    wrappedText.forEach((line, index) => {
+                        // Append the non-bold portion
                         svg.append("text")
-                            .attr("x", centerX + textWidth / 2) // Position right after the non-bold text
+                            .attr("x", centerX)
                             .attr("y", centerY + (index * 15) - 20)
-                            .attr("text-anchor", "start") // Align to start of text
+                            .attr("text-anchor", "middle")
                             .attr("dominant-baseline", "middle")
                             .attr("font-size", "14px")
-                            .attr("font-weight", "bold")
                             .attr("fill", "black")
-                            .text(textPart2);
-                    }
-                });
-            }
+                            .text(line);
+                    });
+                
+                    // Center the bold percentage (textPart2) relative to the container
+                    svg.append("text")
+                        .attr("x", centerX) // Center it horizontally in the container
+                        .attr("y", centerY + (wrappedText.length * 15) - 20) // Position it below the wrapped text
+                        .attr("text-anchor", "middle") // Align to the middle horizontally
+                        .attr("dominant-baseline", "middle")
+                        .attr("font-size", "14px")
+                        .attr("font-weight", "bold")  // Make the percentage bold
+                        .attr("fill", "black")
+                        .text(textPart2);
+                }
+                
         
             simulation.on("tick", function () {
                 group.selectAll("circle")
