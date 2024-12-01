@@ -109,7 +109,7 @@
 108,Stillaguamish Police Department,30,1,0,3.333333333,Y,Tribal,NA,NA
 109,Longview Police Department,92,3,0,3.260869565,N,Cowlitz County,NA,NA
 110,Central Washington University Police Department,31,1,0,3.225806452,N,Kittitas County,NA,NA
-111,"Wa State University Police Department, Pullman",31,1,0,3.225806452,N,Whitman County,NA,NA
+111,"WA State University Police Department, Pullman",31,1,0,3.225806452,N,Whitman County,NA,NA
 112,Snohomish County Corrections Bureau,32,1,0,3.125,N,Snohomish County,NA,NA
 113,Grays Harbor County Sheriff's Office,65,2,0,3.076923077,N,Grays Harbor,NA,NA
 114,Chelan County Sheriff's Office,98,3,0,3.06122449,N,Chelan County,NA,NA
@@ -162,7 +162,7 @@
 161,Franklin County Sheriff's Office,63,1,0,1.587301587,N,Franklin County,NA,NA
 162,Monroe Police Department,63,1,0,1.587301587,N,Snohomish County,NA,NA
 163,Snohomish County Sheriff's Office,462,7,0,1.515151515,N,Snohomish County,NA,NA
-164,Wa State Department Of Fish And Wildlife Police,199,3,1,1.507537688,N,State,NA,NA
+164,WA State Department Of Fish And Wildlife Police,199,3,1,1.507537688,N,State,NA,NA
 165,Pasco Police Department,133,2,1,1.503759398,N,Franklin County,NA,NA
 166,Whatcom County Sheriff's Office,136,2,0,1.470588235,N,Whatcom County,NA,NA
 167,Wenatchee Police Department,68,1,0,1.470588235,N,Chelan County,NA,NA
@@ -178,7 +178,7 @@
 177,Benton County Sheriff's Office,115,1,0,0.869565217,N,Benton County,NA,NA
 178,Vancouver Police Department,319,2,0,0.626959248,N,Clark County,NA,NA
 179,Thurston County Sheriff's Office,162,1,0,0.617283951,N,Thurston County,NA,NA
-180,Wa State Patrol,1546,9,1,0.582147477,N,State,NA,NA
+180,WA State Patrol,1546,9,1,0.582147477,N,State,NA,NA
 181,Tacoma Police Department,516,3,1,0.581395349,N,Pierce County,NA,NA
 182,Seattle Police Department,1902,8,1,0.420609884,N,King County,NA,NA
 183,Kitsap County Sheriff's Office,184,0,0,0,N,Kitsap County,NA,NA
@@ -211,7 +211,7 @@
 210,Clarkston Police Department,28,0,0,0,N,Asotin County,NA,NA
 211,College Place Police Department,28,0,0,0,N,Walla Walla County,NA,NA
 212,Selah Police Department,28,0,0,0,N,Yakima County,NA,NA
-213,Wa State Gambling Commission,27,0,0,0,N,State,NA,NA
+213,WA State Gambling Commission,27,0,0,0,N,State,NA,NA
 214,Benton County Bureau Of Corrections,26,0,0,0,N,Benton County,NA,NA
 215,Lower Elwha Klallam Police Department,25,0,0,0,Y,Tribal,NA,NA
 216,Medina Police Department,25,0,0,0,N,King County,NA,NA
@@ -233,7 +233,7 @@
 232,Asotin Police Department,13,0,0,0,N,Asotin County,NA,NA
 233,Morton Police Department,13,0,0,0,N,Lewis County,NA,NA
 234,Thurston County Corrections Bureau,13,0,0,0,N,Thurston County,NA,NA
-235,Wa State Department Of Natural Resources Police,13,0,0,0,N,State,NA,NA
+235,WA State Department Of Natural Resources Police,13,0,0,0,N,State,NA,NA
 236,Cowlitz County Corrections Department,12,0,0,0,N,Cowlitz County,NA,NA
 237,Moxee Police Department,12,0,0,0,N,Yakima County,NA,NA
 238,South Bend Police Department,12,0,0,0,N,Pacific County,NA,NA
@@ -257,7 +257,7 @@
 256,Reardan Police Department,6,0,0,0,N,Lincoln County,NA,NA
 257,Suquamish Tribal Police,6,0,0,0,Y,Tribal,NA,NA
 258,Tieton Police Department,6,0,0,0,N,Yakima County,NA,NA
-259,Wa State Department Of Corrections,6,0,0,0,N,State,NA,NA
+259,WA State Department Of Corrections,6,0,0,0,N,State,NA,NA
 260,Chelan County Juvenile Court,5,0,0,0,N,Chelan County,NA,NA
 261,Odessa Police Department,5,0,0,0,N,Lincoln County,NA,NA
 262,Republic Police Department,5,0,0,0,N,Ferry County,NA,NA
@@ -266,7 +266,7 @@
 265,Chelan Police Department,4,0,0,0,N,Chelan County,NA,NA
 266,Spokane County Juvenile Court Services,4,0,0,0,N,Spokane County,NA,NA
 267,Vader Police Department,4,0,0,0,N,Lewis County,NA,NA
-268,"Wa State University Police Department, Vancouver",4,0,0,0,N,State,NA,NA
+268,"WA State University Police Department, Vancouver",4,0,0,0,N,State,NA,NA
 269,Wilbur Police Department,4,0,0,0,N,Lincoln County,NA,NA
 270,Duvall-Carnation Police Department,3,0,0,0,N,King County,NA,NA
 271,Muckleshoot Indian Tribe Wildlife & Fisheries Department,3,0,0,0,Y,Tribal,NA,NA
@@ -284,7 +284,7 @@
 283,Snoqualmie Tribal Police Department,2,0,0,0,Y,Tribal,NA,NA
 284,Southwest Snohomish County Communications,2,0,0,0,N,Snohomish County,NA,NA
 285,Tekoa Police Department,2,0,0,0,N,Whitman County,NA,NA
-286,Wa State Department Of Health,2,0,0,0,N,State,NA,NA
+286,WA State Department Of Health,2,0,0,0,N,State,NA,NA
 287,Whitman County Emergency Communications,2,0,0,0,N,Whitman County,NA,NA
 288,Benton County Prosecuting Attorney's Office,1,0,0,0,N,Benton County,NA,NA
 289,City Of Spokane Parks & Recreation,1,0,0,0,N,Spokane County,NA,NA
@@ -324,9 +324,9 @@
 324,Stillaguamish Tribal Courts And Justice Services,1,0,0,0,Y,Tribal,NA,NA
 325,Swinomish Tribal Police,1,0,0,0,Y,Tribal,NA,NA
 326,Toppenish City Jail,1,0,0,0,N,Yakima County,NA,NA
-327,U.s. Department Of Homeland Security,1,0,0,0,N,Federal,NA,NA
-328,U.s. Department Of Veterans Affairs Police Department,1,0,0,0,N,Federal,NA,NA
-329,Wa State Department Of Agriculture,1,0,0,0,N,State,NA,NA
-330,Wa State Department Of Labor And Industry,1,0,0,0,N,State,NA,NA
+327,U.S. Department Of Homeland Security,1,0,0,0,N,Federal,NA,NA
+328,U.S. Department Of Veterans Affairs Police Department,1,0,0,0,N,Federal,NA,NA
+329,WA State Department Of Agriculture,1,0,0,0,N,State,NA,NA
+330,WA State Department Of Labor And Industry,1,0,0,0,N,State,NA,NA
 331,White Salmon Police Department,1,0,0,0,N,Klickitat County,NA,NA
 332,Woodinville Community Facility,1,0,0,0,N,King County,NA,NA
