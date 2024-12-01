@@ -81,3 +81,66 @@ svg {
         flex: 1 1 100%; /* 1 chart per row on very small screens */
     }
 }
+
+/* General container styles */
+.visualization-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px; /* Space for the legend at the bottom */
+}
+
+/* Ensure the main visualization containers are laid out in a row */
+.visualization-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow for wrapping on smaller screens */
+    margin-bottom: 50px; /* Space for the legend */
+}
+
+/* The legend will be part of the flow, below the containers */
+.legend-container {
+    width: 100%; /* Take up full width */
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px; /* Space above the legend */
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    display: block;
+}
+
+/* Style each legend item */
+.legend-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 12px;  /* Circle size */
+    height: 12px;
+    margin-right: 5px;
+    border-radius: 50%; /* Makes it a circle */
+}
+
+.legend-description {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .legend-container {
+        font-size: 12px;
+    }
+
+    .legend-dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
