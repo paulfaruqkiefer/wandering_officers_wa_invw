@@ -135,7 +135,7 @@
 134,Eastern Washington University Police Department,38,1,0,2.631578947,N,Spokane County,NA,NA
 135,Pacific County Sheriff's Office,38,1,1,2.631578947,N,Pacific County,NA,NA
 136,Poulsbo Police Department,38,1,1,2.631578947,N,Kitsap County,NA,NA
-137,Wscjtc,38,1,0,2.631578947,N,State,NA,NA
+137,Washington State Criminal Justice Training Commission,38,1,0,2.631578947,N,State,NA,NA
 138,Battle Ground Police Department,39,1,0,2.564102564,N,Clark County,NA,NA
 139,Port Orchard Police Department,39,1,0,2.564102564,N,Kitsap County,NA,NA
 140,Adams County Sheriff's Office,40,1,0,2.5,N,Adams County,NA,NA
@@ -189,7 +189,7 @@
 188,Puyallup Police Department,101,0,0,0,N,Pierce County,NA,NA
 189,Walla Walla Police Department,67,0,0,0,N,Walla Walla County,NA,NA
 190,Okanogan County Sheriff's Office,64,0,0,0,N,Okanogan County,NA,NA
-191,Wscjtc Contract Instructors,57,0,0,0,N,State,NA,NA
+191,Washington State Criminal Justice Training Commission Contract Instructors,57,0,0,0,N,State,NA,NA
 192,Tumwater Police Department,56,0,0,0,N,Thurston County,NA,NA
 193,Shelton Police Department,50,0,0,0,N,Mason County,NA,NA
 194,Walla Walla County Sheriff's Office,49,0,0,0,N,Walla Walla County,NA,NA
@@ -330,3 +330,4 @@
 330,Washington State Department of Labor and Industry,1,0,0,0,N,State,NA,NA
 331,White Salmon Police Department,1,0,0,0,N,Klickitat County,NA,NA
 332,Woodinville Community Facility,1,0,0,0,N,King County,NA,NA
+333,Wahkiakum County Sheriff's Office,20,1,0,5,N,Wahkiakum County,NA,NA 
