@@ -139,12 +139,33 @@ function drawGroup(groupData, svgId, jurisdiction) {
             } else if (jurisdiction === "All Jurisdictions") {
                 return d.is_tribal_lea === "Y" ? "orange" : "steelblue";
             } else {
-                return (
-                    d.jurisdiction_1 === jurisdiction ||
-                    d.jurisdiction_2 === jurisdiction ||
-                    d.jurisdiction_3 === jurisdiction
-                ) ? "steelblue" : "lightgray";
+                // Case 1: If "All Jurisdictions" is selected, color "Tribal" jurisdictions orange
+                if (jurisdiction === "All Jurisdictions") {
+                    return d.jurisdiction_1 === "Tribal" || d.jurisdiction_2 === "Tribal" || d.jurisdiction_3 === "Tribal" ? "orange" : "lightgray";
+                }
+                
+                // Case 2: If "Tribal" is selected, color "Tribal" jurisdictions orange
+                else if (jurisdiction === "Tribal") {
+                    return d.jurisdiction_1 === "Tribal" || d.jurisdiction_2 === "Tribal" || d.jurisdiction_3 === "Tribal" ? "orange" : "lightgray";
+                }
+                
+                // Case 3: If the selected jurisdiction matches any of the jurisdiction columns,
+                // and "Tribal" is in jurisdiction_1 and the selected jurisdiction is in jurisdiction_2 or jurisdiction_3
+                else {
+                    if (d.jurisdiction_1 === "Tribal" && (d.jurisdiction_2 === jurisdiction || d.jurisdiction_3 === jurisdiction)) {
+                        return "orange";  // "Tribal" in jurisdiction_1 and match in jurisdiction_2 or jurisdiction_3
+                    } else if (
+                        d.jurisdiction_1 === jurisdiction ||
+                        d.jurisdiction_2 === jurisdiction ||
+                        d.jurisdiction_3 === jurisdiction
+                    ) {
+                        return "steelblue";  // Only jurisdiction matches in any of the columns
+                    } else {
+                        return "lightgray";  // No match
+                    }
+                }
             }
+            
         })
         .attr("stroke", "black")
         .attr("stroke-width", 0)
