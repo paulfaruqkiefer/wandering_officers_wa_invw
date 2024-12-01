@@ -37,7 +37,7 @@
 36,Blaine Police Department,28,3,0,10.71428571,N,Whatcom County,NA,NA
 37,Brewster Police Department,19,2,3,10.52631579,N,Okanogan County,NA,NA
 38,Everson Police Department,19,2,0,10.52631579,N,Whatcom County,NA,NA
-39,Mccleary Police Department,19,2,2,10.52631579,N,Grays Harbor County,NA,NA
+39,McCleary Police Department,19,2,2,10.52631579,N,Grays Harbor County,NA,NA
 40,Allied Universal Executive Protection and Intelligence Services,20,2,0,10,N,Private Security,NA,NA
 41,Kittitas Police Department,10,1,0,10,N,Kittitas County,NA,NA
 42,Ritzville Police Department,10,1,0,10,N,Adams County,NA,NA
@@ -246,7 +246,7 @@
 245,Newport Police Department,9,0,0,0,N,Pend Oreille County,NA,NA
 246,Twisp Police Department,9,0,0,0,N,Okanogan County,NA,NA
 247,Walla Walla County Corrections Department,9,0,0,0,N,Walla Walla County,NA,NA
-248,Wscjtc Firearms Program Instructors,9,0,0,0,N,State,NA,NA
+248,Washington State Criminal Justice Training Commission Firearms Program Instructors,9,0,0,0,N,State,NA,NA
 249,Allied Universal Security Services,8,0,0,0,N,Private Security,NA,NA
 250,Eatonville Police Department,8,0,0,0,N,Pierce County,NA,NA
 251,Granite Falls Police Department,8,0,0,0,N,Snohomish County,NA,NA
@@ -256,7 +256,6 @@
 255,Roy Police Department,7,0,0,0,N,Pierce County,NA,NA
 256,Reardan Police Department,6,0,0,0,N,Lincoln County,NA,NA
 258,Tieton Police Department,6,0,0,0,N,Yakima County,NA,NA
-259,Washington State Department of Corrections,6,0,0,0,N,State,NA,NA
 260,Chelan County Juvenile Court,5,0,0,0,N,Chelan County,NA,NA
 261,Odessa Police Department,5,0,0,0,N,Lincoln County,NA,NA
 262,Republic Police Department,5,0,0,0,N,Ferry County,NA,NA
@@ -314,18 +313,44 @@
 314,Rosalia Police Department,1,0,0,0,N,Whitman County,NA,NA
 315,Seattle Fire Department,1,0,0,0,N,King County,NA,NA
 316,Shoreline College Department of Public Safety,1,0,0,0,N,King County,NA,NA
-318,Snohomish County Juvenile Court,1,0,0,0,N,Snohomish County,NA,NA
-319,Snohomish County Multiple Agency Response Team,1,0,0,0,N,Snohomish County,NA,NA
-320,Spokane County Corrections Department,1,0,0,0,N,Spokane County,NA,NA
-321,Spokane County District Court & Probation Services,1,0,0,0,N,Spokane County,NA,NA
-322,Spokane County Prosecuting Attorney's Office,1,0,0,0,N,Spokane County,NA,NA
-323,Springdale Police Department,1,0,0,0,N,Stevens County,NA,NA
-324,Stillaguamish Tribal Courts and Justice Services,1,0,0,0,Y,Tribal,Snohomish County,NA
-326,Toppenish City Jail,1,0,0,0,N,Yakima County,NA,NA
-327,U.S. Department of Homeland Security,1,0,0,0,N,Federal,NA,NA
-328,U.S. Department of Veterans Affairs Police Department,1,0,0,0,N,Federal,NA,NA
-329,Washington State Department of Agriculture,1,0,0,0,N,State,NA,NA
-330,Washington State Department of Labor and Industry,1,0,0,0,N,State,NA,NA
-331,White Salmon Police Department,1,0,0,0,N,Klickitat County,NA,NA
-332,Woodinville Community Facility,1,0,0,0,N,King County,NA,NA
-333,Wahkiakum County Sheriff's Office,20,1,0,5,N,Wahkiakum County,NA,NA 
+317,Snohomish County Juvenile Court,1,0,0,0,N,Snohomish County,NA,NA
+318,Snohomish County Multiple Agency Response Team,1,0,0,0,N,Snohomish County,NA,NA
+319,Spokane County Corrections Department,1,0,0,0,N,Spokane County,NA,NA
+320,Spokane County District Court & Probation Services,1,0,0,0,N,Spokane County,NA,NA
+321,Spokane County Prosecuting Attorney's Office,1,0,0,0,N,Spokane County,NA,NA
+322,Springdale Police Department,1,0,0,0,N,Stevens County,NA,NA
+323,Stillaguamish Tribal Courts and Justice Services,1,0,0,0,Y,Tribal,Snohomish County,NA
+324,Toppenish City Jail,1,0,0,0,N,Yakima County,NA,NA
+325,U.S. Department of Homeland Security,1,0,0,0,N,Federal,NA,NA
+326,U.S. Department of Veterans Affairs Police Department,1,0,0,0,N,Federal,NA,NA
+327,Washington State Department of Agriculture,1,0,0,0,N,State,NA,NA
+328,Washington State Department of Labor and Industry,1,0,0,0,N,State,NA,NA
+329,White Salmon Police Department,1,0,0,0,N,Klickitat County,NA,NA
+330,Woodinville Community Facility,1,0,0,0,N,King County,NA,NA
+331,Wahkiakum County Sheriff's Office,20,1,0,5,N,Wahkiakum County,NA,NA 
+332,Muckleshoot Indian Tribe Wildlife and Fisheries Department,3,0,0,0,Y,Tribal,Snohomish County,NA
+333,Yakama Nation Police Department,5,0,0,0,Y,Tribal,Yakima County,NA
+334,Bonney Lake Police Department,52,1,0,1.923077,N,Pierce County,NA,NA
+335,Soap Lake Police Department,17,5,3,29.41176,N,Grant County,NA,NA
+336,Sumas Police Department,9,2,0,22.22222,N,Whatcom County,NA,NA
+337,Pierce Transit Public Safety,7,1,0,14.28571,N,Pierce County,NA,NA
+338,Mountlake Terrace Police Department,54,6,0,11.11111,N,Snohomish County,NA,NA
+339,"Security Services Northwest, Inc.",23,2,2,8.69562,N,Private Security,NA,NA
+340,South Correctional Entity (SCORE),37,3,0,8.108108,N,King County,NA,NA
+341,Lake Stevens Police Department,47,3,1,6.382979,N,Snohomish County,NA,NA
+342,Moses Lake Police Department,66,3,2,4.545455,N,Grant County,NA,NA
+343,"MSA Investigations, Inc.",25,1,0,4,N,Private Security,NA,NA
+344,Oak Harbor Police Department,54,2,1,3.703704,N,Island County,NA,NA
+345,Liberty Lake Police Department,31,1,0,3.225806,N,Spokane County,NA,NA
+346,Lincoln County Sheriff's Office,38,1,0,2.631579,N,Lincoln County,NA,NA
+347,Yakima Police Department,221,5,1,2.266546,N,Yakima County,NA,NA
+348,Yakima County Sheriff's Office,94,2,0,2.12766,N,Yakima County,NA,NA
+349,"Security Industry Specialists, Inc.",114,1,0,0.877193,N,Private Security,NA,NA
+350,Lakewood Police Department,153,1,0,0.653595,N,Pierce County,NA,NA
+351,Washington State Liquor and Cannabis Board,78,0,0,0,N,State,NA,NA
+352,Lake Forest Park Police Department,32,0,0,0,N,King County,NA,NA
+353,Yakima County Department of Corrections,17,0,0,0,N,Yakima County,NA,NA
+354,Washington State Office of the Insurance Commissioner,10,0,0,0,N,State,NA,NA
+355,Medical Lake Police Department,8,0,0,0,N,Spokane County,NA,NA
+356,Coupeville Marshal's Office,7,0,0,0,N,Island County,NA,NA
+357,"Directorate of Emergency Service, JBLM Police",5,0,0,0,N,Federal,NA,NA
