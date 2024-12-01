@@ -43,30 +43,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Function to draw circles for a group
         function drawGroup(groupData, svgId, jurisdiction) {
-            const svg = d3.select(`#${svgId}`);
-            svg.selectAll("*").remove(); // Clear existing elements
-
-            const width = 400;
-            const height = 400;
-
-            svg.attr("width", width).attr("height", height);
-
+            const svgContainer = d3.select(`#${svgId}`);
+            const containerWidth = parseFloat(svgContainer.style("width"));
+            const containerHeight = parseFloat(svgContainer.style("height"));
+        
+            svgContainer.selectAll("*").remove(); // Clear existing elements
+        
+            const svg = svgContainer
+                .append("svg")
+                .attr("width", containerWidth)
+                .attr("height", containerHeight);
+        
+            const centerX = containerWidth / 2;
+            const centerY = containerHeight / 2;
+            const maxRadius = Math.min(containerWidth, containerHeight) / 2 - 20; // Adjust for padding
+        
+            const textBufferRadius = 80; // Adjust based on text size and spacing
+        
             const simulation = d3.forceSimulation(groupData)
-                .force("center", d3.forceCenter(width / 2, height / 2))
-                .force("collide", d3.forceCollide(d => radiusScale(d.unique_officers) + 2))
-                .force("charge", d3.forceManyBody().strength(-10))
-                .force("gravity", d3.forceRadial(100, width / 2, height / 2).strength(0.1));
-
+                .force("center", d3.forceCenter(centerX, centerY).strength(0.5))
+                .force("collide", d3.forceCollide(d => radiusScale(d.unique_officers) + 4)) // Adjust spacing
+                .force("radial", d3.forceRadial(maxRadius * 0.6, centerX, centerY).strength(0.3))
+                .force("textBuffer", () => {
+                    groupData.forEach(d => {
+                        const dx = d.x - centerX;
+                        const dy = d.y - centerY;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        const minDistance = textBufferRadius + radiusScale(d.unique_officers);
+        
+                        if (distance < minDistance) {
+                            const angle = Math.atan2(dy, dx);
+                            d.x = centerX + Math.cos(angle) * minDistance;
+                            d.y = centerY + Math.sin(angle) * minDistance;
+                        }
+                    });
+                })
+                .force("bounding", () => {
+                    groupData.forEach(d => {
+                        const r = radiusScale(d.unique_officers);
+                        d.x = Math.max(r, Math.min(containerWidth - r, d.x));
+                        d.y = Math.max(r, Math.min(containerHeight - r, d.y));
+                    });
+                });
+        
             const group = svg.append("g");
-
+        
             group.selectAll("circle")
                 .data(groupData)
                 .enter()
                 .append("circle")
                 .attr("r", d => radiusScale(d.unique_officers))
                 .attr("fill", d => {
-                    // Highlight based on selected jurisdiction
-                    if (jurisdiction === "All Jurisdictions") {
+                    if (jurisdiction === "Tribal") {
+                        return d.is_tribal_lea === "Y" ? "orange" : "lightgray";
+                    } else if (jurisdiction === "All Jurisdictions") {
                         return d.is_tribal_lea === "Y" ? "orange" : "steelblue";
                     } else {
                         return (
@@ -93,36 +123,62 @@ document.addEventListener("DOMContentLoaded", function () {
                 .on("mouseout", () => {
                     d3.select("#tooltip").style("display", "none");
                 });
-
-            // Show comparison text only for "All Jurisdictions"
-            if (jurisdiction === "All Jurisdictions") {
-                const tribalCount = groupData.filter(d => d.is_tribal_lea === "Y").length;
-                const percentage = (tribalCount / groupData.length * 100).toFixed(2);
-                const textContent = `Tribal Police Departments as Percentage of Group: ${percentage}%`;
-
-                const wrappedText = wrapText(textContent, 20);
-
-                wrappedText.forEach((line, index) => {
-                    svg.append("text")
-                        .attr("x", width / 2)
-                        .attr("y", height / 2 + (index * 15) - 20)
-                        .attr("text-anchor", "middle")
-                        .attr("dominant-baseline", "middle")
-                        .attr("font-size", "12px")
-                        .attr("font-weight", "bold")
-                        .attr("fill", "black")
-                        .text(line);
-                });
-            }
-
+        
+                if (jurisdiction === "All Jurisdictions") {
+                    const tribalCount = groupData.filter(d => d.is_tribal_lea === "Y").length;
+                    const percentage = (tribalCount / groupData.length * 100).toFixed(0);
+                    
+                    // Split the text into parts
+                    const textPart1 = "Tribal Police Departments as Percentage of Group: ";
+                    const textPart2 = `${percentage}%`;
+                
+                    // Use a function to wrap textPart1, while textPart2 is separate
+                    const wrappedText = wrapText(textPart1, 20);
+                
+                    wrappedText.forEach((line, index) => {
+                        // Append the non-bold portion
+                        svg.append("text")
+                            .attr("x", centerX)
+                            .attr("y", centerY + (index * 15) - 20)
+                            .attr("text-anchor", "middle")
+                            .attr("dominant-baseline", "middle")
+                            .attr("font-size", "14px")
+                            .attr("fill", "black")
+                            .text(line);
+                
+                        // If this is the last line, append the bold percentage at the end
+                        if (index === wrappedText.length - 1) {
+                            const textWidth = svg
+                                .append("text")
+                                .attr("x", -9999) // Place offscreen to measure text width
+                                .attr("y", -9999)
+                                .attr("font-size", "14px")
+                                .text(line)
+                                .node()
+                                .getBBox().width;
+                
+                            svg.append("text")
+                                .attr("x", centerX + textWidth / 2) // Position right after the non-bold text
+                                .attr("y", centerY + (index * 15) - 20)
+                                .attr("text-anchor", "start") // Align to start of text
+                                .attr("dominant-baseline", "middle")
+                                .attr("font-size", "14px")
+                                .attr("font-weight", "bold")
+                                .attr("fill", "black")
+                                .text(textPart2);
+                        }
+                    });
+                }
+                
+        
             simulation.on("tick", function () {
                 group.selectAll("circle")
                     .attr("cx", d => d.x)
                     .attr("cy", d => d.y);
             });
         }
+        
 
-        // Initial Render
         let currentJurisdiction = "All Jurisdictions";
 
         const drawAllGroups = () => {
@@ -133,7 +189,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         drawAllGroups();
 
-        // Dropdown listener for jurisdiction filtering
         d3.select("#jurisdiction-select").on("change", function () {
             currentJurisdiction = d3.select(this).property("value");
             drawAllGroups();
