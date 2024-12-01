@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Scale for circle radii
         const radiusScale = d3.scaleLinear()
             .domain([d3.min(data, d => d.unique_officers), d3.max(data, d => d.unique_officers)])
-            .range([5, 20]);
+            .range([2, 40]);
 
         // Function to wrap text into multiple lines
         function wrapText(text, width) {
@@ -79,10 +79,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 })
                 .force("bounding", () => {
+                    const buffer = 20; // Invisible buffer around the edge (adjust as needed)
                     groupData.forEach(d => {
                         const r = radiusScale(d.unique_officers);
-                        d.x = Math.max(r, Math.min(containerWidth - r, d.x));
-                        d.y = Math.max(r, Math.min(containerHeight - r, d.y));
+                        d.x = Math.max(r + buffer, Math.min(containerWidth - r - buffer, d.x));
+                        d.y = Math.max(r + buffer, Math.min(containerHeight - r - buffer, d.y));
                     });
                 });
         
@@ -124,52 +125,51 @@ document.addEventListener("DOMContentLoaded", function () {
                     d3.select("#tooltip").style("display", "none");
                 });
         
-                if (jurisdiction === "All Jurisdictions") {
-                    const tribalCount = groupData.filter(d => d.is_tribal_lea === "Y").length;
-                    const percentage = (tribalCount / groupData.length * 100).toFixed(0);
-                    
-                    // Split the text into parts
-                    const textPart1 = "Tribal Police Departments as Percentage of Group: ";
-                    const textPart2 = `${percentage}%`;
+            if (jurisdiction === "All Jurisdictions") {
+                const tribalCount = groupData.filter(d => d.is_tribal_lea === "Y").length;
+                const percentage = (tribalCount / groupData.length * 100).toFixed(0);
                 
-                    // Use a function to wrap textPart1, while textPart2 is separate
-                    const wrappedText = wrapText(textPart1, 20);
-                
-                    wrappedText.forEach((line, index) => {
-                        // Append the non-bold portion
+                // Split the text into parts
+                const textPart1 = "Tribal Police Departments as Percentage of Group: ";
+                const textPart2 = `${percentage}%`;
+            
+                // Use a function to wrap textPart1, while textPart2 is separate
+                const wrappedText = wrapText(textPart1, 20);
+            
+                wrappedText.forEach((line, index) => {
+                    // Append the non-bold portion
+                    svg.append("text")
+                        .attr("x", centerX)
+                        .attr("y", centerY + (index * 15) - 20)
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "middle")
+                        .attr("font-size", "14px")
+                        .attr("fill", "black")
+                        .text(line);
+            
+                    // If this is the last line, append the bold percentage at the end
+                    if (index === wrappedText.length - 1) {
+                        const textWidth = svg
+                            .append("text")
+                            .attr("x", -9999) // Place offscreen to measure text width
+                            .attr("y", -9999)
+                            .attr("font-size", "14px")
+                            .text(line)
+                            .node()
+                            .getBBox().width;
+            
                         svg.append("text")
-                            .attr("x", centerX)
+                            .attr("x", centerX + textWidth / 2) // Position right after the non-bold text
                             .attr("y", centerY + (index * 15) - 20)
-                            .attr("text-anchor", "middle")
+                            .attr("text-anchor", "start") // Align to start of text
                             .attr("dominant-baseline", "middle")
                             .attr("font-size", "14px")
+                            .attr("font-weight", "bold")
                             .attr("fill", "black")
-                            .text(line);
-                
-                        // If this is the last line, append the bold percentage at the end
-                        if (index === wrappedText.length - 1) {
-                            const textWidth = svg
-                                .append("text")
-                                .attr("x", -9999) // Place offscreen to measure text width
-                                .attr("y", -9999)
-                                .attr("font-size", "14px")
-                                .text(line)
-                                .node()
-                                .getBBox().width;
-                
-                            svg.append("text")
-                                .attr("x", centerX + textWidth / 2) // Position right after the non-bold text
-                                .attr("y", centerY + (index * 15) - 20)
-                                .attr("text-anchor", "start") // Align to start of text
-                                .attr("dominant-baseline", "middle")
-                                .attr("font-size", "14px")
-                                .attr("font-weight", "bold")
-                                .attr("fill", "black")
-                                .text(textPart2);
-                        }
-                    });
-                }
-                
+                            .text(textPart2);
+                    }
+                });
+            }
         
             simulation.on("tick", function () {
                 group.selectAll("circle")
@@ -177,7 +177,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     .attr("cy", d => d.y);
             });
         }
-        
 
         let currentJurisdiction = "All Jurisdictions";
 
