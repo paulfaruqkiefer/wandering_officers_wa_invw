@@ -9,9 +9,16 @@ body {
 }
 
 h1 {
-    font-size: 24px;
-    text-align: center;
+    font-size: 24px; /* Adjust font size as needed */
+    text-align: center; /* Centers text */
+    margin: 20px auto; /* Centers the heading and adds vertical spacing */
+    width: 100%; /* Makes it responsive to the page width */
+    max-width: 800px; /* Optional: limit the maximum width */
+    padding: 0 10px; /* Add some padding for small screens */
+    word-wrap: break-word; /* Ensures the text wraps on smaller screens */
+    line-height: 1.5; /* Improve readability */
 }
+
 
 .dropdown-container {
     margin: 10px 0;
