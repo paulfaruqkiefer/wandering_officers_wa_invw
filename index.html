@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Tribal Law Enforcement Agencies Hire Disproportionate Share of Washington's Previously Fired Officers</h1>
+    <h1>Previously Fired Officers by Agency</h1>
+
     <!-- Dropdown Menu for Jurisdiction Selection -->
     <div class="dropdown-container">
         <label for="jurisdiction-select">Select Jurisdiction:</label>
@@ -59,24 +60,30 @@
             <option value="Private Security">Private Security Company</option>
         </select>
     </div>
+
+    <!-- New bar-chart-container above the circle containers -->
+    <div class="bar-chart-container">
+        <svg id="stacked-bar-chart"></svg>
+    </div>
+
     <div class="visualization-container">
         <!-- Left Group (No Post-Termination Hires) -->
         <div class="container" id="left-group">
-            <h3>Never Hired Officer With Termination On Record</h3>
+            <h3>No Post-Termination Hires</h3>
             <svg id="chart-left"></svg>
         </div>
         <!-- Middle Group (Post-Single-Termination Hires) -->
         <div class="container" id="middle-group">
-            <h3>Hired Officer With One Termination On Record</h3>
+            <h3>Post-Single-Termination Hires</h3>
             <svg id="chart-middle"></svg>
         </div>
         <!-- Right Group (Post-Multiple-Termination Hires) -->
         <div class="container" id="right-group">
-            <h3>Hired Officer With Multiple Terminations On Record</h3>
+            <h3>Post-Multiple-Termination Hires</h3>
             <svg id="chart-right"></svg>
         </div>
+
         <!-- Legend Section -->
-        <!-- Legend Container (Positioned Below the Containers) -->
         <div class="legend-container">
             <div class="legend-item">
                 <span class="legend-dot" style="background-color: steelblue;"></span>
@@ -91,7 +98,6 @@
                 <br>
                 <i>Tribal governments are sovereign entities and not subject to the jurisdiction of county governments. Tribal law enforcement agencies included under county jurisdictions for geographic reference only.</i>
             </div>
-        </div>
         </div>
     </div>
     <!-- Tooltip for mouseover -->

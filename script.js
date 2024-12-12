@@ -16,6 +16,140 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
+        /////////////////////////////////////////
+        // New: Create data for stacked bar chart
+        /////////////////////////////////////////
+
+        // Get all employing_organizations
+        const allOrgs = data.map(d => d.employing_organization);
+        const allUniqueOrgs = new Set(allOrgs);
+
+        // Separate by group
+        const leftOrgs = new Set(data.filter(d => d.group === "Left").map(d => d.employing_organization));
+        const middleOrgs = new Set(data.filter(d => d.group === "Middle").map(d => d.employing_organization));
+        const rightOrgs = new Set(data.filter(d => d.group === "Right").map(d => d.employing_organization));
+
+        // Count tribal vs non-tribal
+        function countOrgs(orgSet) {
+            let tribalCount = 0;
+            let nonTribalCount = 0;
+            for (let org of orgSet) {
+                // Find a row matching this org
+                // Assuming org identity stable, find any row with employing_organization === org
+                const row = data.find(d => d.employing_organization === org);
+                if (row && row.jurisdiction_1.includes("Tribal")) {
+                    tribalCount++;
+                } else {
+                    nonTribalCount++;
+                }
+            }
+            return { tribalCount, nonTribalCount };
+        }
+
+        const allCount = countOrgs(allUniqueOrgs);
+        const leftCount = countOrgs(leftOrgs);
+        const middleCount = countOrgs(middleOrgs);
+        const rightCount = countOrgs(rightOrgs);
+
+        // Bar data structure
+        const barData = [
+            { label: "All", tribal: allCount.tribalCount, nonTribal: allCount.nonTribalCount },
+            { label: "No Post-Termination Hires", tribal: leftCount.tribalCount, nonTribal: leftCount.nonTribalCount },
+            { label: "Hired Officers with Single Termination on Record", tribal: middleCount.tribalCount, nonTribal: middleCount.nonTribalCount },
+            { label: "Hired Officers with Multiple Terminations on Record", tribal: rightCount.tribalCount, nonTribal: rightCount.nonTribalCount }
+        ];
+
+        // X-scale domain based on the largest total (tribal+nonTribal)
+        const maxTotal = d3.max(barData, d => d.tribal + d.nonTribal);
+
+        /////////////////////////////////////////
+        // Draw stacked bar chart
+        /////////////////////////////////////////
+
+        const barChartWidth = 800;
+        const barChartHeight = 200;
+        // Reduced top and bottom margins
+        const barMargin = { top: 5, right: 100, bottom: 5, left: 250 };
+
+        const innerWidth = barChartWidth - barMargin.left - barMargin.right;
+        const innerHeight = barChartHeight - barMargin.top - barMargin.bottom;
+
+
+        
+        const barSvg = d3.select("#stacked-bar-chart")
+        .attr("viewBox", `0 0 ${barChartWidth} ${barChartHeight}`)
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .style("width", "100%")
+        .style("height", "auto");
+
+        const barChartG = barSvg.append("g")
+        .attr("transform", `translate(${barMargin.left}, ${barMargin.top})`);
+
+        // Add a 20% buffer to ensure space on the right for labels
+        const domainMax = maxTotal * 1.2;
+
+        const xScale = d3.scaleLinear()
+            .domain([0, domainMax])
+            .range([0, innerWidth]);
+
+        const yScale = d3.scaleBand()
+            .domain(barData.map(d => d.label))
+            .range([0, innerHeight])
+            .padding(0.3);
+
+        // Axes for bar chart
+        barChartG.append("g")
+            .attr("class", "bar-x-axis")
+            .attr("transform", `translate(0, ${innerHeight})`)
+            .call(d3.axisBottom(xScale).ticks(5));
+
+        barChartG.append("g")
+            .attr("class", "bar-y-axis")
+            .call(d3.axisLeft(yScale));
+
+        // Draw bars
+        barChartG.selectAll(".bar-group")
+            .data(barData)
+            .enter()
+            .append("g")
+            .attr("class", "bar-group")
+            .attr("transform", d => `translate(0, ${yScale(d.label)})`)
+            .each(function(d) {
+                const g = d3.select(this);
+                const total = d.tribal + d.nonTribal;
+                // Tribal segment
+                g.append("rect")
+                    .attr("x", 0)
+                    .attr("y", 0)
+                    .attr("height", yScale.bandwidth())
+                    .attr("width", xScale(d.tribal))
+                    .attr("fill", "orange")
+                    .attr("stroke", "black");
+
+                // NonTribal segment
+                g.append("rect")
+                    .attr("x", xScale(d.tribal))
+                    .attr("y", 0)
+                    .attr("height", yScale.bandwidth())
+                    .attr("width", xScale(d.nonTribal))
+                    .attr("fill", "steelblue")
+                    .attr("stroke", "black");
+
+                 // Calculate percentage tribal
+                const tribalPercentage = (d.tribal / total) * 100;
+
+                // Place the label outside the bar, to the right
+                const labelX = xScale(total) + 5; // 5px outside the bar on the right
+                g.append("text")
+                    .attr("x", labelX)
+                    .attr("y", yScale.bandwidth() / 2)
+                    .attr("dominant-baseline", "middle")
+                    .attr("text-anchor", "start")
+                    .style("font-size", "12px")
+                    .style("fill", "black")
+                    .text(tribalPercentage.toFixed(1) + "%");
+            });
+
         // Scale for circle radii
         const radiusScale = d3.scaleLinear()
             .domain([d3.min(data, d => d.unique_officers), d3.max(data, d => d.unique_officers)])
