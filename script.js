@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const barChartWidth = 800;
         const barChartHeight = 200;
         // Reduced top and bottom margins
-        const barMargin = { top: 5, right: 100, bottom: 5, left: 250 };
+        const barMargin = { top: 5, right: 50, bottom: 5, left: 250 };
 
         const innerWidth = barChartWidth - barMargin.left - barMargin.right;
         const innerHeight = barChartHeight - barMargin.top - barMargin.bottom;
