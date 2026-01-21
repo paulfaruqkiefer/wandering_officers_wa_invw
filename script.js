@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .attr("y", -120)
             .attr("text-anchor", "middle")
             .attr("font-size", "16px")
-            .text("Tribal law enforcement agencies account for just over 8% of all Washinginton law enforcement agencies, but they account for more 10% of agencies that have hired officers with one termination on their records and more than 13% of agencies that have hired officers with more than one termination on record.");
+            .text("Tribal law enforcement agencies account for just over 8% of all Washinginton law enforcement agencies, but they account for more than 11% of agencies that have hired officers with more than one termination on record.");
 
         wrapSvgText(descriptionText, innerWidth * 0.9);
 
@@ -439,3 +439,4 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Error loading the CSV file:", error);
     });
 });
+
